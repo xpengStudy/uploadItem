@@ -42,4 +42,9 @@ public class GoodsController {
             return new ResponseDTO("500","秒杀失败！",null);
         }
     }
+
+    @GetMapping("/testgood")
+    public String test(){
+        return "success";
+    }
 }

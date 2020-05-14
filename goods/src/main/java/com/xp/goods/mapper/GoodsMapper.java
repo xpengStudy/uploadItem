@@ -3,6 +3,7 @@ package com.xp.goods.mapper;
 import com.xp.core.Goods;
 import com.xp.core.Order;
 import org.apache.ibatis.annotations.*;
+import org.springframework.cache.annotation.Cacheable;
 
 @Mapper
 public interface GoodsMapper {
@@ -20,6 +21,7 @@ public interface GoodsMapper {
      * @param code
      * @return
      */
+    @Cacheable(value = "goods")
     @Select(" select * from t_goods where code = #{code} ")
     Goods getGoods(@Param("code") String code);
 

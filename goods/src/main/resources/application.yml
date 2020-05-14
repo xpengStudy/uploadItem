@@ -9,6 +9,10 @@ spring:
     url: jdbc:mysql://localhost:32769/skill?useUnicode=true&characterEnconding=utf-8&useSSL=false
     username: root
     password: rootroot
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
   # mabatis 依赖
 mybatis:
   type-aliases-package: com.xp.core.Goods
